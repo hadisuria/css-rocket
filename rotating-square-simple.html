@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rotating Square</title>
+		<style>
+			.container {
+				width: 200px;
+				height: 200px;
+				position: relative;
+				margin: 100px auto;
+				border: 1px solid black;
+			}
+
+			.square {
+				width: 50%;
+				height: 50%;
+				background-color: gray;
+				position: absolute;
+				animation: rotateSquare 4s linear infinite;
+				transform-origin: top right;
+			}
+
+			@keyframes rotateSquare {
+				0% {
+					transform: rotate(0deg);
+					transform-origin: top right;
+				}
+				12.5% {
+					transform: rotate(-90deg);
+					transform-origin: top right;
+				}
+				25% {
+					transform: rotate(-90deg);
+					transform-origin: top right;
+				}
+				25.1% {
+					transform: translate(200%, 0%) rotate(-90deg);
+					transform-origin: bottom left;
+				}
+				37.5% {
+					transform: translate(200%, 0%) rotate(-180deg);
+					transform-origin: bottom left;
+				}
+				50% {
+					transform: translate(200%, 0%) rotate(-180deg);
+					transform-origin: bottom left;
+				}
+				50.1% {
+					transform: translate(0%, 200%) rotate(-180deg);
+					transform-origin: top right;
+				}
+				62.5% {
+					transform: translate(0%, 200%) rotate(-270deg);
+					transform-origin: top right;
+				}
+				75% {
+					transform: translate(0%, 200%) rotate(-270deg);
+					transform-origin: top right;
+				}
+				75.1% {
+					transform: translate(0%, 0%) rotate(-270deg);
+					transform-origin: bottom left;
+				}
+				87.5% {
+					transform: translate(0%, 0%) rotate(-360deg);
+					transform-origin: bottom left;
+				}
+				100% {
+					transform: translate(0%, 0%) rotate(-360deg);
+					transform-origin: bottom left;
+				}
+			}
+		</style>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="square"></div>
+		</div>
+	</body>
+</html>
